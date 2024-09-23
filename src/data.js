@@ -2,11 +2,7 @@ export const setData = (tasks) => {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 };
 
-export const getData = () => (JSON.parse(localStorage.getItem('tasks')) || [
-  {
-
-  },
-]);
+export const getData = () => (JSON.parse(localStorage.getItem('tasks')) || []);
 
 export const deleteArrOfIndex = (arrOfIndex) => {
   const tasks = getData().filter((e) => !arrOfIndex.includes(e.index.toString()))
