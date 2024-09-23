@@ -4,7 +4,6 @@ import drawClock from './clock.js';
 import alarm, { addAudio } from './alarm.js';
 
 navigator.serviceWorker.register('/alarm.js').then(function(reg) {
-//   console.log('Service Worker registered!');
   setInterval(alarm, 15 * 1000);
 });
 
