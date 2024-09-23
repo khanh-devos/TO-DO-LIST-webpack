@@ -3,6 +3,10 @@ import Task from './tasks.js';
 import drawClock from './clock.js';
 import alarm, { addAudio } from './alarm.js';
 
+navigator.serviceWorker.register('/alarm.js').then(function(reg) {
+  console.log('Service Worker registered!');
+});
+
 const todos = new Task();
 todos.buildForm1();
 todos.buildForm2();
